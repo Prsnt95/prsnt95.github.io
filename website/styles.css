@@ -1,0 +1,397 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+  scroll-behavior: smooth;
+	/* scroll-padding: 0rem;
+	scroll-margin-top: 0; */
+
+
+}
+
+html{
+	color: white;
+    background-color: black;
+    /* scroll-snap-type: y mandatory; */ /* causes a bug s.t when scrolling up in the first screen makes the screen stuck*/
+}
+
+
+body{
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+
+}
+.main {
+	scroll-behavior: auto;
+	scroll-padding: 10rem;
+	scroll-margin-top: 0;
+  /* scroll-snap-type: y mandatory; */
+
+	width:100%;
+	height: 100vh;
+	/* background: black; */
+    background: linear-gradient(to left, rgba(2,0,36,1) 0%, rgba(42,9,121,0.9626444327731093) 35%, rgba(0,212,255,1) 100%);
+
+	position:relative;
+	overflow-y :scroll;
+  scroll-snap-align: center;
+    /* position:sticky; */
+    top: 0;
+
+  }
+  .nav-links{
+	text-align: right;
+	/* background-color: 	rgb(23,36,43); */
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+    /* color: black; */
+  }
+
+.logo{
+	float: left;
+	width: 70px;
+	height:70px;;
+	padding:10px;
+	margin: auto;
+
+  }
+
+  .nav-links ul li{
+	margin:  20px;
+	color: #fff;
+	display: inline-block;
+
+  }
+
+
+  .nav-links ul li a{
+	text-decoration:  none;
+	font-size: 18px;
+	position: relative;
+    /* color: red; */
+  }
+
+  .nav-links ul li a::after{
+	content: '';
+	width: 0%;
+	height:3px;
+	background: #ff004f;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transition:0.5s;
+  }
+  .nav-links ul li a:hover::after{
+	content: '';
+	width: 100%;
+	height:3px;
+	background: blue;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+  }
+
+
+  /* DONE WITH NAV */
+
+
+  #name_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This ensures the container takes up the full viewport height. */
+    
+    
+  }
+
+  #name{
+    font-size: 100px;
+    font-family: "Lucida Handwriting";
+
+    background-image: linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(121,79,9,0.3435968137254902) 35%, rgba(0,212,255,1) 100%);
+    /* background-image: url('resources/color.jpeg'); */
+
+    -webkit-background-clip: text; /*clips the background to text*/
+    background-clip: text;
+    color: transparent;
+    /* animation: blue-greenish 2s infinite; */
+  
+
+  }
+
+  /*  FALLING ARROW ANIMATION  FROM YOUTUBE "ONLINE TUTORIALS' */
+.scroll_indicator {
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    bottom:15px;
+    /* background: none; */
+    transform: rotate(45deg);
+}
+.scroll_indicator span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: scroll-animation 1.5s linear infinite;
+}
+
+.scroll_indicator span:nth-child(1){
+    top:-25px;
+    left: -25px;
+    animation-delay: 0s;
+
+}
+.scroll_indicator span:nth-child(2){
+    top:-12.5px;
+    left: -12.5px;
+    animation-delay: 0.18s;
+
+}
+.scroll_indicator span:nth-child(3){
+    top:0px;
+    left: 0px;
+    animation-delay: 0.26s;
+}
+/* .scroll_indicator span:nth-child(3){
+    top: 15px;
+    left: 15px;
+} */
+
+
+
+
+      /* DOne with name Section */
+
+
+  #info{
+	/* background: linear-gradient(155deg, orange, blue); */
+    background: black;
+	width: 100%;
+	height:100vh;
+	float: right;
+	position: sticky;
+  scroll-snap-align: start;
+  top:0;
+  z-index: -1;
+  }
+
+  .about{
+	margin-top: 20px;
+	margin-left: 20px;
+	text-align: center;
+  
+
+  }
+
+  .description{
+	width:75%;
+	float: right;
+	margin: auto;
+	text-align: left;
+  }
+  #home{
+	float: left;
+
+  }
+
+
+
+
+
+
+
+
+  #second-section{
+	scroll-margin-top: 0;
+	background: linear-gradient(155deg, orange, cyan);
+	width: 100%;
+	height:100vh;
+	float: right;
+	margin-right: 10px;
+	margin-top:10px ;
+  scroll-snap-align: start;
+  position:sticky;
+
+
+  }
+
+
+  .photo{
+	width:20%;
+	height:40vh;
+	position: relative;
+  }
+
+  .github-container  {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	padding: 10px; 
+	box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  .git_logo{
+	width:30px;
+	height:30px;
+	margin: 10px;
+  }
+
+  #project-div{
+    background: white;
+	width: 100%;
+	height:100vh;
+	float: right;
+  display: flex;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  flex-direction: column;
+  position: sticky;
+  }
+  .project-text {
+    display: flex;
+    justify-content: center; 
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    background-color: cadetblue;
+    align-self: center;
+    justify-self: center;
+
+
+  }
+  
+  .scroll-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .scroll-item {
+    flex: 0 0 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    /* background-color: lightgray; */
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    border: 2px solid;
+  }
+  
+
+
+
+  @keyframes blue-greenish {
+    0% {
+      background-image: linear-gradient(to right, #0099cc, #66cc99);
+    }
+    25% {
+      background-image: linear-gradient(to right, #66cc99, #0099cc);
+    }
+    50% {
+      background-image: linear-gradient(to right, #0099cc, #66cc99);
+    }
+    75% {
+      background-image: linear-gradient(to right, #66cc99, #0099cc);
+    }
+    100% {
+      background-image: linear-gradient(to right, #0099cc, #66cc99);
+    }
+  }
+
+
+  @keyframes scroll-animation {
+    0%{
+        border-color: #fff;
+        transform: translate(0,0);
+    }
+    20%{
+        border-color: #222;
+        transform: translate(15px,15px);
+    }
+    20.1%, 100%{
+        border-color: #222;
+
+    }
+  }
+
+
+
+
+  #ext{
+    /* background: linear-gradient(155deg, orange, blue); */
+      background: black;
+    width: 100%;
+    height:100vh;
+    float: right;
+    position: sticky;
+    scroll-snap-align: start;
+    top:0;
+    z-index: -1;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  
+    }
+  
+  
+
+    .link{
+      color: blueviolet;
+      font-weight:bold;
+      text-decoration: underline;
+      font-size: 20px;
+    }
+    .hr{
+      border: 2px dashed green;
+    
+    }
+    
+    
+
+    .project {
+      box-sizing: border-box;
+      width: 50%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      float: left; /* This will make each project appear side by side */
+      /* Add any other styling you need for each project */
+    
+      /* Additional styles to ensure proper width calculation */
+      margin: 0; /* Reset margin to avoid unexpected spacing */
+      box-sizing: border-box; /* Include padding and border in the total width */
+    }  
+    
+  .description{
+	width:75%;
+	float: right;
+	margin: auto;
+	text-align: left;
+  }
+  #home{
+	float: left;
+
+  }
