@@ -1,87 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css" >
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scrolling Divs</title>
+  <link rel="stylesheet" href="styles.css">
 
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>The Tab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="js/particles.min.js"></script>
 
 </head>
 <body>
-	<div class="main">
+         <!-- main-section Begins here -->
+
+  <div id="top"></div>
+  <div id="main-section">
+    <div class="heading">
+      <h1 class="txt"> Hi, I'm <span>Prashant</span>.<br> I'm a Front-End Web Developer.
+    </h1>
+    </div>
+    <a href="#about-section" class="actual_btn"><button class="scrollBtn">Show my Work</button></a>
+    <div class="scroll_indicator"> <a href="#about-section">
+      <span></span>
+      <span></span>
+      <span></span>
+  </a>
+  </div>
+  </div>
+       <!-- ^main-section Ends here -->
+
+
+  <div id="nav">
 		<nav> 
-			<div class="nav-links">
-					<a href="#"><img src="resources/logo.png" alt="alternatetext" class="logo"></a>
-				<ul>
-					<li><a href="#info">ABOUT</a></li>
-					<li><a href="#project-div">PROJECTS</a></li>
-                    <li><a href="extras.html">EXTRAS</a></li>
-					<li><a href="#project-div">CONTACT</a></li>
+      <a href="#top"><img src="resources/p-logo.png" alt="alternatetext" class="logo"></a>
+      <ul>
+					<li><a href="#about-section">ABOUT</a></li>
+					<li><a href="#project-section">PROJECTS</a></li>
+					<li><a href="#contact-section">CONTACT</a></li>
 
 				</ul>
-			</div>
 			
 		</nav>
-        <div id="name_wrapper"> 
-            <h1 id="name"> PRASHANT GHIMIRE</h1>
-        </div>
-        <div class="scroll_indicator"> <a href="#info">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        </div>
-	</div>
+  </div>
 
-		<div id="info">
-            <div class="info-container">
-                <h2 class="about">^ADD parallax effect between these two divs</h2>
-            </div>
 
-            <div class="about-me">
-                <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quae similique laborum fugiat a cumque dignissimos, i
-                    psam porro. Facilis reiciendis animi saepe, quas ratione magni ab nulla a illo provident.
-                </p>
-                <img src="resources/placeholder.png" alt="alternatetext" class="photo">
-            </div>
-            
-            
-            <div class="github-container">
-                <a target="_blank" href="https://github.com/Prsnt95"\><img src="resources/git_logo.png" alt="alternatetext" class="git_logo"></a>
-                <a target="_blank" href="https://www.linkedin.com/in/prashant-ghimire-b0422527b/"><img src="resources/linkedin_logo.png" alt="alternatetext" class="git_logo"></a>
+     <!-- About section Begins here -->
+  <div id="about-section">
+    <h2 class="project-text">About Me</h2>
+</div>
+   <!-- ^About section Ends here -->
 
-            </div>                 
-    </div>
 
-    <div id="project-div">
-        <div class="project-text">
-            <h1>Project Folders</h1>
-        </div>
-        
-    <div class="container">
-            <div class="scroll-container">
-            <div class="scroll-item">
-                <text>Generative Methods</text>
-                <div class="logo327"> <img src="resources/a4.png"></div>
-                <div class="logo327"> <img src="resources/a4.png"></div>
-                <div class="logo327"> <img src="resources/a4.png"></div>
-                <div class="logo327"> <img src="resources/a4.png"></div>
 
-               
-            </div>
-            <div class="scroll-item">Item 2</div>
-            <div class="scroll-item">Item 3</div>
-            <div class="scroll-item">Item 4</div>
-            <div class="scroll-item">Item 5</div>
-            </div>
-      </div>
-    </div>
-      
+ <!-- Project section start -->
+  <div id="project-section">
+    <h2 class="project-text">My Projects</h2>
+    <img class="project-img sAndL" src="./resources/sal.png">
+       <p class="about-project ludo-text">Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br> Eaque placeat facilis autem laudantium sequi quasi <br>officia at, asperiores pariatur assumenda alias accusantium.<br> Atque labore et, ipsa incidunt laboriosam minus odio.</p>
 
+  </div>
+   <div id="contact-section">
+    <div class="project-wrapper"><h2>Contact</h2></div>
+   </div>
+
+
+   <script src="js/index.js"></script>
 
 </body>
 </html>
+

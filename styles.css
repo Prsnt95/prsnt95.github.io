@@ -1,397 +1,434 @@
+
 *{
 	margin:0;
 	padding:0;
 	font-family: sans-serif;
   scroll-behavior: smooth;
-	/* scroll-padding: 0rem;
-	scroll-margin-top: 0; */
-
-
+  box-sizing: border-box;
 }
 
-html{
-	color: white;
+body {
+    margin: 0;
+    padding: 0;
     background-color: black;
-    /* scroll-snap-type: y mandatory; */ /* causes a bug s.t when scrolling up in the first screen makes the screen stuck*/
-}
-
-
-body{
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: start;
-
-}
-.main {
-	scroll-behavior: auto;
-	scroll-padding: 10rem;
-	scroll-margin-top: 0;
-  /* scroll-snap-type: y mandatory; */
-
-	width:100%;
-	height: 100vh;
-	/* background: black; */
-    background: linear-gradient(to left, rgba(2,0,36,1) 0%, rgba(42,9,121,0.9626444327731093) 35%, rgba(0,212,255,1) 100%);
-
-	position:relative;
-	overflow-y :scroll;
-  scroll-snap-align: center;
-    /* position:sticky; */
-    top: 0;
-
-  }
-  .nav-links{
-	text-align: right;
-	/* background-color: 	rgb(23,36,43); */
-	width: 100%;
-	position: fixed;
-	z-index: 1;
-    /* color: black; */
-  }
-
-.logo{
-	float: left;
-	width: 70px;
-	height:70px;;
-	padding:10px;
-	margin: auto;
-
-  }
-
-  .nav-links ul li{
-	margin:  20px;
-	color: #fff;
-	display: inline-block;
-
   }
 
 
-  .nav-links ul li a{
-	text-decoration:  none;
-	font-size: 18px;
-	position: relative;
-    /* color: red; */
-  }
+  /* Navigation bar start */
+  
 
-  .nav-links ul li a::after{
-	content: '';
-	width: 0%;
-	height:3px;
-	background: #ff004f;
-	position: absolute;
-	left: 0;
-	bottom: -5px;
-	transition:0.5s;
-  }
-  .nav-links ul li a:hover::after{
-	content: '';
-	width: 100%;
-	height:3px;
-	background: blue;
-	position: absolute;
-	left: 0;
-	bottom: -5px;
-  }
-
-
-  /* DONE WITH NAV */
-
-
-  #name_wrapper{
+  
+  #main-section, #about-section, #project-section, #contact-section{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This ensures the container takes up the full viewport height. */
-    
-    
+    scroll-snap-align: center;
+  }
+  
+  #main-section {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
-  #name{
-    font-size: 100px;
-    font-family: "Lucida Handwriting";
+  .heading {
+    width: fit-content;
+    height: fit-content;
+    /* background-color: black; */
+    text-align: center;
+    color: white;
+    /* Specify fallback fonts after Montserrat */
+    position:absolute;
+    /* z-index:-1; */
 
-    background-image: linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(121,79,9,0.3435968137254902) 35%, rgba(0,212,255,1) 100%);
-    /* background-image: url('resources/color.jpeg'); */
+}
+.heading h1{
+  font-family: 'Kode Mono';
+  font-size: 48px; /* Setting font size separately */
+  /* text-shadow: 1px 2px 1px red; */
+  background-image: linear-gradient(135deg, #88559b, #aa0df3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 
-    -webkit-background-clip: text; /*clips the background to text*/
+
+
+}
+  .heading span{
+    color:#afa4d7;
+    font-family: 'Kode Mono';
+    /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate; */
+      color: blueviolet;
+  display:inline-block;
+  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+
+
+  
+
+  }
+  #nav h1{
+    color: white;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-right: 0px;
+  }
+  
+  /* Navigation */
+
+  #nav {
+    /* background-color: black; */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center; 
+    padding: 10px 20px;
+    height: 3rem;
+    backdrop-filter: blur(2px);
+    justify-content: left;
+
+  }
+  
+  
+  
+  #nav nav {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Ensure nav takes full width */
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    left: 0;
+
+
+  
+  }
+  
+  
+  #nav ul {
+    /* list-style-type: none; */
+    display: flex;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  
+  
+  }
+  
+  #nav ul li {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  #nav ul li a {
+    text-decoration:  none;
+    font-size: 18px;
+    position: relative;
+    color: blueviolet;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  #nav ul li a::after{
+    content: '';
+    width: 0%;
+    height:3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    bottom: -5px;
+    transition:0.5s;
+    }
+    #nav ul li a:hover::after{
+      content: '';
+      width: 100%;
+      height:3px;
+      background: blue;
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      bottom: -5px;
+      }
+    
+  
+
+
+  #about-section {
+    background-color: black;
+    color: white;
+    position: sticky;
+    /* top: 0; */
+    z-index: 2;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+
+  }
+
+ 
+
+
+  p{
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 8s infinite;
+  
+  }
+
+  
+  #project-section {
+    background-color: black;
+    color: white;
+    position: sticky;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .project-text{
+    top: 10%;
+    justify-self: center;
+    margin-bottom: auto;
+    font-family: 'Kode Mono';
+    font-size: 2vw; /* Setting font size separately */
+    color: linear-gradient(#a83ad1, #6e0e9c) 30;
+    background-image: linear-gradient(135deg, #a83ad1, #6e0e9c);
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    /* animation: blue-greenish 2s infinite; */
+    position:sticky
+  }
+
+
+  .project-img{
+    width:20em;
+    height:20em;
+    border-image: linear-gradient(#a83ad1, #6e0e9c) 30;
+
+    border-width: 4px;
+    border-style: solid;
+      }
+
+  .sAndL{
+    position: absolute;
+    top: 50%;
+    left: 2em;
+    transform: translateY(-50%);
+    height:20%;
+    width:20%;
+  
+  }
+  .about-project{
+    position:absolute;
+    justify-self: center;
+
+  }
+
+
+
+p{
+  background-image: linear-gradient(135deg, #a83ad1, #6e0e9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}
+
+  #contact-section{
+    background-color: black;
+    color: white;
+    position: sticky;
+    z-index: 2;
+    height: 100vh;
+
+  } 
+
+  
+
+  /* CSS */
+  .scrollBtn {
+    position: relative;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    background-color: #111;
+    margin-left: auto;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    touch-action: manipulation;
+    animation: glow 1s ease-in-out infinite alternate;    
   
 
   }
 
-  /*  FALLING ARROW ANIMATION  FROM YOUTUBE "ONLINE TUTORIALS' */
-.scroll_indicator {
+  
+  .actual_btn{
     position: absolute;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    bottom:15px;
-    /* background: none; */
-    transform: rotate(45deg);
-}
-.scroll_indicator span {
+    margin-top: 200px ;
+  }
+  
+  .scrollBtn:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #330000,
+      #331a00,
+      #333300,
+      #003300,
+      #003333,
+      #000033,
+      #330033,
+      #330019,
+      #330000
+    );
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 10s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .scrollBtn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
 
-    display: block;
-    box-sizing: border-box;
-    border: none;
-    border-right: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    animation: scroll-animation 1.5s linear infinite;
+
+
+
+  
+   /*  FALLING ARROW ANIMATION  FROM YOUTUBE "ONLINE TUTORIALS' */
+.scroll_indicator {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom:40px;
+  background: none;
+  transform: rotate(45deg);
+}
+.scroll_indicator span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  border-right: 3px solid purple;
+  border-bottom: 3px solid purple;
+  animation: scroll-animation 1.5s linear infinite;
+  
 }
 
 .scroll_indicator span:nth-child(1){
-    top:-25px;
-    left: -25px;
-    animation-delay: 0s;
+  top:-25px;
+  left: -25px;
+  animation-delay: 0s;
 
 }
 .scroll_indicator span:nth-child(2){
-    top:-12.5px;
-    left: -12.5px;
-    animation-delay: 0.18s;
+  top:-12.5px;
+  left: -12.5px;
+  animation-delay: 0.18s;
 
 }
 .scroll_indicator span:nth-child(3){
-    top:0px;
-    left: 0px;
-    animation-delay: 0.26s;
+  top:0px;
+  left: 0px;
+  animation-delay: 0.26s;
 }
-/* .scroll_indicator span:nth-child(3){
-    top: 15px;
-    left: 15px;
-} */
 
 
 
 
-      /* DOne with name Section */
 
 
-  #info{
-	/* background: linear-gradient(155deg, orange, blue); */
-    background: black;
-	width: 100%;
-	height:100vh;
-	float: right;
-	position: sticky;
-  scroll-snap-align: start;
-  top:0;
-  z-index: -1;
+@keyframes scroll-animation {
+  0%{
+      border-color: purple;
+      transform: translate(0,0);
+      
   }
-
-  .about{
-	margin-top: 20px;
-	margin-left: 20px;
-	text-align: center;
-  
+  20%{
+      border-color: green;
+      transform: translate(15px,15px);
+  }
+  20.1%, 100%{
+      border-color: purple;
 
   }
+}
 
-  .description{
-	width:75%;
-	float: right;
-	margin: auto;
-	text-align: left;
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #710cec, 0 0 10px #710cec, 0 0 0px #710cec;
   }
-  #home{
-	float: left;
-
+  to {
+    text-shadow: 0 0 10px #710cec, 0 0 20px #710cec, 0 0 30px #710cec;
   }
+}
 
 
+.shimmer {
+  color: grey;
+  display:inline-block;
+  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+}
 
 
-
-
-
-
-  #second-section{
-	scroll-margin-top: 0;
-	background: linear-gradient(155deg, orange, cyan);
-	width: 100%;
-	height:100vh;
-	float: right;
-	margin-right: 10px;
-	margin-top:10px ;
-  scroll-snap-align: start;
-  position:sticky;
-
-
-  }
-
-
-  .photo{
-	width:20%;
-	height:40vh;
-	position: relative;
-  }
-
-  .github-container  {
-	display: flex;
-	position: absolute;
-	width: 100%;
-	padding: 10px; 
-	box-sizing: border-box; /* Include padding in width calculation */
-  }
-  
-  .git_logo{
-	width:30px;
-	height:30px;
-	margin: 10px;
-  }
-
-  #project-div{
-    background: white;
-	width: 100%;
-	height:100vh;
-	float: right;
-  display: flex;
-  scroll-snap-align: start;
-  justify-content: center;
-  align-items: center;
-  background-color: gray;
-  flex-direction: column;
-  position: sticky;
-  }
-  .project-text {
-    display: flex;
-    justify-content: center; 
-    position: relative;
-    margin-top: -20px;
-    margin-bottom: 20px;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50vh;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    background-color: cadetblue;
-    align-self: center;
-    justify-self: center;
-
-
-  }
-  
-  .scroll-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .scroll-item {
-    flex: 0 0 100%;
-    height: 100%;
-    scroll-snap-align: center;
-    /* background-color: lightgray; */
-    text-align: center;
-    font-size: 24px;
-    padding: 20px;
-    border: 2px solid;
-  }
-  
-
-
-
-  @keyframes blue-greenish {
-    0% {
-      background-image: linear-gradient(to right, #0099cc, #66cc99);
-    }
-    25% {
-      background-image: linear-gradient(to right, #66cc99, #0099cc);
-    }
-    50% {
-      background-image: linear-gradient(to right, #0099cc, #66cc99);
-    }
-    75% {
-      background-image: linear-gradient(to right, #66cc99, #0099cc);
-    }
-    100% {
-      background-image: linear-gradient(to right, #0099cc, #66cc99);
-    }
-  }
-
-
-  @keyframes scroll-animation {
-    0%{
-        border-color: #fff;
-        transform: translate(0,0);
-    }
-    20%{
-        border-color: #222;
-        transform: translate(15px,15px);
-    }
-    20.1%, 100%{
-        border-color: #222;
-
-    }
-  }
-
-
-
-
-  #ext{
-    /* background: linear-gradient(155deg, orange, blue); */
-      background: black;
-    width: 100%;
-    height:100vh;
-    float: right;
-    position: sticky;
-    scroll-snap-align: start;
-    top:0;
-    z-index: -1;
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-  
-    }
-  
-  
-
-    .link{
-      color: blueviolet;
-      font-weight:bold;
-      text-decoration: underline;
-      font-size: 20px;
-    }
-    .hr{
-      border: 2px dashed green;
-    
-    }
-    
-    
-
-    .project {
-      box-sizing: border-box;
-      width: 50%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      float: left; /* This will make each project appear side by side */
-      /* Add any other styling you need for each project */
-    
-      /* Additional styles to ensure proper width calculation */
-      margin: 0; /* Reset margin to avoid unexpected spacing */
-      box-sizing: border-box; /* Include padding and border in the total width */
-    }  
-    
-  .description{
-	width:75%;
-	float: right;
-	margin: auto;
-	text-align: left;
-  }
-  #home{
-	float: left;
-
-  }
+@keyframes shimmer {
+  100% {-webkit-mask-position:left}
+}
