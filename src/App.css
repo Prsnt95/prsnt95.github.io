@@ -1,0 +1,21 @@
+body{
+  overflow: hidden;
+
+}
+
+.App {
+  box-sizing: border-box;
+  display: flex;
+  background-color: black;
+  scroll-behavior: smooth;
+  scroll-snap-type: initial;
+  scroll-snap-stop: initial;
+}
+
+.contentSection{
+  flex: 1;
+  /* border: 2px solid salmon; */
+  overflow-y: scroll;
+  height:100vh;
+}
+

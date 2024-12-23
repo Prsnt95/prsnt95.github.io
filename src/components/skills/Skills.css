@@ -1,0 +1,39 @@
+.skills-container{
+    color: white;
+    margin-left: 5%;
+    max-width: 80%;
+    margin-top: 10%;
+    display: flex;  
+    flex-direction: column;
+    padding: 50px;
+
+    height:100%;
+
+}
+
+.skills-header{
+    font-size: 1em;
+}
+
+@media (min-width: 501px) {
+    .skills-container {
+        margin-left: 2%;
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+}
+
+@media (min-width: 801px) {
+    .skills-container {
+        margin-left: 3%;
+        
+    }
+}
+
+@media (min-width: 1201px) {
+    .skills-container {
+        margin-left: 5%;
+        
+    }
+}
