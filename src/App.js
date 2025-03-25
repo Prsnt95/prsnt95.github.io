@@ -1,8 +1,8 @@
 import "./App.css";
-import Content from "./components/content/Content";
-import Navbar from "./components/navbar/Navbar";
-import Projects from "./components/projects/Projects";
-import Skills from "./components/skills/Skills";
+import Content from "./pages/content/Content";
+import Navbar from "./pages/navbar/Navbar";
+import Projects from "./pages/projects/Projects";
+import Skills from "./pages/skills/Skills";
 
 function App() {
   return (

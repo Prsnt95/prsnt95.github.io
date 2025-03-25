@@ -1,0 +1,11 @@
+.project-container{
+    color: white;
+    margin-left: 5%;
+    /* background-color: rgb(36, 36, 36); */
+    max-width: 80%;
+    margin-top: 1px;
+    /* overflow-y: auto; */
+    display: flex;  
+    flex-direction: column;
+    max-width: 80%;
+}

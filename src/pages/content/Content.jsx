@@ -3,7 +3,7 @@ import "./Content.css";
 import IconGithub from "../../assets/icons/IconGithub";
 import IconLinkedin from "../../assets/icons/IconLinkedin";
 import IconGmail from "../../assets/icons/IconGmail";
-
+import HoverTextButton from "../../components/HoverTextButton";
 function Content() {
   return (
     <div className="content-container">
@@ -22,6 +22,7 @@ function Content() {
           software and learning new technologies.
         </p>
       </div>
+      <HoverTextButton />
 
       <div className="social">
         <IconLinkedin className="socialIcon" height="2em" width="2em" />

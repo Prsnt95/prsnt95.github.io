@@ -9,14 +9,9 @@ function Projects() {
         SELECT <span className="span-projects">PROJECTS</span>
       </h1>
       <div className="card-collection">
-        <div className="card-collection-inner">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-        </div>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
       </div>
     </div>
   );

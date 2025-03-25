@@ -4,6 +4,7 @@ import IconHome from "../../assets/icons/IconHome";
 import IconPortfolio from "../../assets/icons/IconFolderOpen";
 import IconContacts from "../../assets/icons/IconContacts";
 import IconTools from "../../assets/icons/IconTools";
+import HoverTextButton from "../../components/HoverTextButton";
 
 function Navbar() {
   return (
@@ -11,16 +12,16 @@ function Navbar() {
       <div className="Navbar-container">
         <ul className="Navbar-list">
           <li className="Navbar-item">
-            <IconHome height="2em" width="2em" />
+            <HoverTextButton text="Home" icon={IconHome} />
           </li>
           <li className="Navbar-item">
-            <IconPortfolio height="2em" width="2em" />
+            <HoverTextButton text="Projects" icon={IconPortfolio} />
           </li>
           <li className="Navbar-item">
-            <IconTools height="2em" width="2em" />
+            <HoverTextButton text="Tools" icon={IconTools} />
           </li>
           <li className="Navbar-item">
-            <IconContacts height="2em" width="2em" />
+            <HoverTextButton text="Contact" icon={IconContacts} />
           </li>
         </ul>
       </div>
