@@ -1,0 +1,53 @@
+{
+    "projects": [
+        {
+            "id":"1",
+            "name": "CampusKit",
+            "description": "An all-in-one productivity app for students.",
+            "tools": ["React", "Node.js", "Express"],
+            "repository": "https://github.com/prsnt95/campuskit",
+            "live":"https://example.com",
+            "image": "projects/campuskit.png"
+
+        },
+        {
+            "id":"2",
+            "name": "Snakes and Ladders",
+            "description": "A two-player game using the GE211 game engine.",
+            "tools": ["C++", "GE211"],
+            "repository": "https://github.com/prsnt95/snakes-and-ladders",
+            "live":"https://example.com",
+            "image": "projects/campuskit.png"
+
+        },
+        {
+            "id":"3",
+            "name": "Room Locator",
+            "description": "An Android app for navigation within Lane Tech High School.",
+            "tools": ["Java", "Android Studio"],
+            "repository": "https://github.com/prsnt95/room-locator",
+            "image": "/src/assets/projects/campuskit.png"
+
+        },
+
+        {
+            "id":"4",
+            "name": "Climate Action Evanston Dashboard",
+            "description": "A data-driven dashboard for tracking climate impact.",
+            "tools": ["React", "Supabase", "PostgreSQL"],
+            "repository": "https://github.com/prsnt95/cae-dashboard",
+            "image": "/src/assets/projects/campuskit.png"
+        },
+
+        {
+            "id":"5",
+            "name": "Personal Portfolio",
+            "description": "A portfolio website to showcase projects and skills.",
+            "tools": ["HTML", "CSS", "JavaScript"],
+            "repository": "https://github.com/prsnt95/portfolio",
+            "live":"https://example.com",
+            "image": "/src/assets/projects/campuskit.png"
+        }
+
+    ]
+}

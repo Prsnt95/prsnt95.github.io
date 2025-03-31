@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+.Navbar-item:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
 body{
   overflow: hidden;
 
@@ -10,15 +25,37 @@ body{
   scroll-behavior: smooth;
   scroll-snap-type: initial;
   scroll-snap-stop: initial;
+  /* border: 2px solid white; */
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 53px;
+  font-style: normal;
+
+
 }
+
 
 .contentSection{
   flex: 1;
-  /* border: 2px solid salmon; */
   overflow-y: scroll;
   height:100vh;
+  /* padding:50px; */
+  /* padding-top:100px; */
+
 }
 
+
+
+
+.page {
+  flex:1;
+  color: white;
+  min-height:100vh;
+  padding: 140px;
+  margin-left: 50px;
+  padding-bottom: 0;
+  /* border:2px solid white; */
+}
 
 
 
