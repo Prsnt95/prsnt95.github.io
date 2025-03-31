@@ -1,0 +1,66 @@
+
+
+
+/* About header styling */
+.projects-header-container {
+  margin-top: 2%;
+}
+
+/* Name styling */
+.projects-title {
+  margin: 0;
+  font-size: 2em; /* Reduced size for smaller screens */
+}
+
+@media (min-width: 501px) {
+  .name {
+      font-size: 2em;
+  }
+}
+
+@media (min-width: 1201px) {
+  .name {
+      font-size: 3em;
+  }
+}
+
+/* Last name color */
+.lastname {
+  color: rgb(64, 255, 121);
+}
+
+/* Student description */
+.student {
+  margin: 0;
+  font-size: 1.2em; /* Adjusted for phones */
+  font-weight: bold;
+  color: rgb(200, 198, 195);
+}
+
+.addy {
+  font-size: 1.2em; /* Adjusted for smaller screens */
+  margin-top: 10px;
+  color: rgb(188, 186, 184);
+}
+
+/* Description container */
+.description-container {
+  color: rgb(125, 125, 124);
+  font-size: 1.2em;
+  margin-top: 30px; 
+}
+
+/* Description text */
+.description {
+  margin: 0;
+}
+.projects-card-collection{
+  display: flex;
+  /* margin:20px; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+
+

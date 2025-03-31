@@ -3,26 +3,24 @@ import "./Content.css";
 import IconGithub from "../../assets/icons/IconGithub";
 import IconLinkedin from "../../assets/icons/IconLinkedin";
 import IconGmail from "../../assets/icons/IconGmail";
-
 function Content() {
   return (
     <div className="content-container">
       <div className="about-header">
         <h1 className="name">
-          PRASHANT <span className="lastname">GHIMIRE</span>
+          prashant <span className="lastname">ghimire</span>
         </h1>
         <p className="student">
-          Student - Computer Science - @Northwestern University
+          student - computer science - @northwestern university
         </p>
-        <p className="addy">Chicago, IL.</p>
+        <p className="addy">chicago, il.</p>
       </div>
       <div className="description-container">
-        <p className="description">
-          I am an enthusiastic computer science student who enjoys building cool
+        <p className="description-text">
+          i am an enthusiastic computer science student who enjoys building cool
           software and learning new technologies.
         </p>
       </div>
-
       <div className="social">
         <IconLinkedin className="socialIcon" height="2em" width="2em" />
         <IconGithub className="socialIcon" height="2em" width="2em" />
