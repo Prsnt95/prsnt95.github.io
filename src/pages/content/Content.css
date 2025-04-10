@@ -1,4 +1,8 @@
-
+.content-container {
+    max-width: 800px; /* Keep max-width to make content compact */
+    margin: 0; /* Remove auto margin to align left */
+    padding-left: 2rem; /* Add padding to align with other content */
+}
 
 /* About header styling */
 .about-header {
@@ -51,7 +55,10 @@
     color: rgb(125, 125, 124);
     font-size: 1.2em; /* Adjusted for smaller screens */
     margin-top: 30px; /* Reduced margin for compact view */
-    max-width:800px;
+    max-width: 600px; /* Keep max-width to make description compact */
+    /* max-width:800px; */
+    min-width: 200px;
+    margin-left: 0; /* Align to the left */
 }
 
 
@@ -64,13 +71,12 @@
 .social {
     display: flex;
     margin-top: 5%;
-    gap: 15px; /* Reduced gap for smaller screens */
+    gap: 1rem; /* Reduced gap for smaller screens */
+    justify-content: flex-start; /* Align to the left */
     /* padding: 10px; */
-    justify-content: space-between;
-
-    /* border:2px solid green; */
     font-size: 1em; /* Adjusted size for phones */
     width: fit-content;
+    margin-left: 0; /* Align to the left */
 }
 
 .socialIcon {

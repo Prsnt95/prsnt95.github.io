@@ -5,8 +5,10 @@
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
+    "framer-motion": "^12.6.3",
     "lucide-react": "^0.485.0",
     "react": "^19.0.0",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.1",
     "react-scripts": "5.0.1",
@@ -39,8 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.2.0"
   }
 }
-
-

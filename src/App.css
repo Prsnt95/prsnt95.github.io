@@ -1,62 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
-::-webkit-scrollbar {
-  display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .Navbar-item:focus {
   outline: none;
 }
 
 html {
   scroll-behavior: smooth;
-
+  overflow-y: hidden;
 }
 
-body{
-  overflow: hidden;
-
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .App {
   box-sizing: border-box;
   display: flex;
-  background-color: black;
   scroll-behavior: smooth;
   scroll-snap-type: initial;
   scroll-snap-stop: initial;
-  /* border: 2px solid white; */
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: 53px;
+  font-weight: 70px;
   font-style: normal;
-
-
+  --dot-bg: #000000;
+  --dot-color: #100f0f;
+  --dot-size: 5px;
+  --dot-space: 100px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 20%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+  min-height: 100vh;
+  width: 100%;
 }
 
-
-.contentSection{
+.contentSection {
   flex: 1;
-  overflow-y: scroll;
-  height:100vh;
-  /* padding:50px; */
-  /* padding-top:100px; */
-
+  overflow-y: auto;
+  height: 100vh;
+  width: 100%;
+  margin-left: 100px;
+  padding-left: 50px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-
-
+/* Hide scrollbar for Chrome, Safari and Opera */
+.contentSection::-webkit-scrollbar {
+  display: none;
+}
 
 .page {
-  flex:1;
   color: white;
-  min-height:100vh;
-  padding: 140px;
-  margin-left: 50px;
-  padding-bottom: 0;
-  /* border:2px solid white; */
+  min-height: 100vh;
+  padding: 100px 50px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.projects_page {
+  padding-top: 0;
+}
 
+.cursor {
+  background-color: rgb(12, 193, 12);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  opacity: 50%;
+  z-index: 0;
+}
 
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .page {
+    padding: 80px 40px;
+    max-width: 1200px;
+    justify-content: center;
+  }
+  
+  .contentSection {
+    margin-left: 80px;
+    padding-left: 40px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 60px 30px;
+    max-width: 900px;
+    justify-content: center;
+  }
+  
+  .App {
+    --dot-space: 50px;
+  }
+  
+  .contentSection {
+    margin-left: 0;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page {
+    padding: 40px 20px;
+    max-width: 100%;
+    justify-content: center;
+  }
+  
+  .App {
+    --dot-space: 30px;
+  }
+  
+  .contentSection {
+    padding-left: 20px;
+  }
+}

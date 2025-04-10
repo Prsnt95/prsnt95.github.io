@@ -9,6 +9,7 @@
   align-items: center; /* Ensures vertical alignment */
   gap: 1rem; /* Keeps consistent spacing */
 }
+
 .hover-button {
   border: none;
   border-radius: 0.375rem;
@@ -22,18 +23,22 @@
   padding:2px;
   transition: transform 0.5s ease, color 0.5s ease, border-color 1s ease, box-shadow 1.5s ease;
   margin: 2px;
-
 }
 
 .hover-button:hover {
-
   cursor: pointer;
   border-color: rgb(5, 152, 49);
   color: rgb(11, 220, 74);
   box-shadow: none;
   transform: perspective(500px) rotateY(0deg); /* Start rotation */
+}
 
-
+.hover-button.active {
+  border-color: rgb(5, 152, 49);
+  color: rgb(11, 220, 74);
+  transform: perspective(500px) rotateY(0deg);
+  box-shadow: none;
+  transition: transform 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
 .hover-text {
@@ -48,4 +53,41 @@
 .hover-button:hover + .hover-text {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .button-container {
+    gap: 0.5rem;
+  }
+
+  .hover-button {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .hover-button:hover {
+    transform: none;
+  }
+
+  .hover-button.active {
+    border-color: rgb(5, 152, 49);
+    color: rgb(11, 220, 74);
+    box-shadow: none;
+  }
+
+  .hover-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button-container {
+    gap: 0.25rem;
+  }
+
+  .hover-button {
+    padding: 1px;
+    margin: 1px;
+  }
 }

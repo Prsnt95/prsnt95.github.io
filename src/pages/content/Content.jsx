@@ -10,7 +10,7 @@ function Content() {
         <h1 className="name">
           prashant <span className="lastname">ghimire</span>
         </h1>
-        <p className="student">
+        <p className="student"> 
           student - computer science - @northwestern university
         </p>
         <p className="addy">chicago, il.</p>

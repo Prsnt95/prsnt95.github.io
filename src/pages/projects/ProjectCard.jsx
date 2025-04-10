@@ -19,9 +19,8 @@ function ProjectCard({ data }) {
           View on GitHub
         </a>
         <p>
-          {" "}
           <a href={data.live} target="_blank" rel="noopener noreferrer">
-            demo
+            Demo
           </a>
         </p>
       </div>
